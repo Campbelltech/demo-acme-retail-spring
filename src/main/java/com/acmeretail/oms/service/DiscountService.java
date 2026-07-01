@@ -20,7 +20,7 @@ public class DiscountService {
      * Upper bound, as a percentage, on the combined effect of stacked discounts.
      * Protects margins when multiple promotions apply to the same order.
      */
-    private static final BigDecimal MAX_STACKED_DISCOUNT_PERCENT = new BigDecimal("40");
+    private static final BigDecimal MAX_STACKED_DISCOUNT_PERCENT = new BigDecimal("45");
 
     /**
      * Computes the value given away by a buy-x-get-y promotion. For every complete
