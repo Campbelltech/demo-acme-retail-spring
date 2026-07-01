@@ -421,7 +421,7 @@ class DiscountServiceDiffblueTest {
 
     // Assert
     verify(proposedDiscount).isGreaterThan(isNull());
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
     assertSame(proposedDiscount, actualCapToMaximumResult);
   }
 
@@ -455,7 +455,7 @@ class DiscountServiceDiffblueTest {
 
     // Assert
     verify(proposedDiscount).isGreaterThan(isNull());
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
     assertNull(actualCapToMaximumResult);
   }
 
@@ -489,7 +489,7 @@ class DiscountServiceDiffblueTest {
         IllegalArgumentException.class,
         () -> discountService.capToMaximum(proposedDiscount, subtotal));
     verify(proposedDiscount).isGreaterThan(isNull());
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
   }
 
   /**
@@ -519,7 +519,7 @@ class DiscountServiceDiffblueTest {
     assertThrows(
         IllegalArgumentException.class,
         () -> discountService.capToMaximum(proposedDiscount, subtotal));
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
   }
 
   /**
@@ -596,7 +596,7 @@ class DiscountServiceDiffblueTest {
     // Assert
     verify(proposedDiscount).isGreaterThan(isNull());
     verify(proposedDiscount).isLessThan(isA(Money.class));
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
     assertTrue(actualWouldBeCappedResult);
   }
 
@@ -633,7 +633,7 @@ class DiscountServiceDiffblueTest {
     // Assert
     verify(proposedDiscount).isGreaterThan(isA(Money.class));
     verify(money).isLessThan(isA(Money.class));
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
     assertFalse(actualWouldBeCappedResult);
   }
 
@@ -670,7 +670,7 @@ class DiscountServiceDiffblueTest {
     // Assert
     verify(proposedDiscount).isGreaterThan(isA(Money.class));
     verify(money).isLessThan(isA(Money.class));
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
     assertTrue(actualWouldBeCappedResult);
   }
 
@@ -704,7 +704,7 @@ class DiscountServiceDiffblueTest {
         IllegalArgumentException.class,
         () -> discountService.wouldBeCapped(proposedDiscount, subtotal));
     verify(proposedDiscount).isGreaterThan(isNull());
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
   }
 
   /**
@@ -734,7 +734,7 @@ class DiscountServiceDiffblueTest {
     assertThrows(
         IllegalArgumentException.class,
         () -> discountService.wouldBeCapped(proposedDiscount, subtotal));
-    verify(subtotal).percentage(40.0d);
+    verify(subtotal).percentage(45.0d);
   }
 
   /**
